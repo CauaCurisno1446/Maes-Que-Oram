@@ -5,8 +5,10 @@
 package gui;
 
 import dao.maesDAO;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import model.Mae;
+import model.ImagePanel;
 
 
 /**
@@ -22,6 +24,10 @@ public class MaeGUI extends javax.swing.JFrame {
      */
     public MaeGUI() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        this.setTitle("Cadastro de mães");
+        this.setResizable(false);
     }
 
     /**
@@ -33,22 +39,29 @@ public class MaeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txt_nome = new javax.swing.JTextField();
+        jPanel1 = new model.ImagePanel("/static/img/mae_background.jpg");
         txt_endereco = new javax.swing.JTextField();
         Jdata_chooser = new com.toedter.calendar.JDateChooser();
         btn_cadastrar_mae = new javax.swing.JButton();
         txt_telefone = new javax.swing.JFormattedTextField();
+        txt_nome = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Cadastro de Mães");
+        jPanel1.setMaximumSize(new java.awt.Dimension(698, 439));
 
-        txt_nome.setText("Nome");
+        txt_endereco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
-        txt_endereco.setText("Endereço");
-
+        btn_cadastrar_mae.setBackground(new java.awt.Color(177, 80, 106));
+        btn_cadastrar_mae.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_cadastrar_mae.setForeground(new java.awt.Color(255, 255, 255));
         btn_cadastrar_mae.setText("Cadastrar");
+        btn_cadastrar_mae.setBorderPainted(false);
+        btn_cadastrar_mae.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_cadastrar_mae.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_cadastrar_maeActionPerformed(evt);
@@ -61,46 +74,83 @@ public class MaeGUI extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        txt_nome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(177, 80, 106));
+        jLabel1.setText("Nome");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(177, 80, 106));
+        jLabel2.setText("Telefone");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(177, 80, 106));
+        jLabel3.setText("Data de Nascimento");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(177, 80, 106));
+        jLabel4.setText("Endereço");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txt_endereco, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_nome)
+                                .addComponent(txt_telefone)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(12, 12, 12)
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Jdata_chooser, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(btn_cadastrar_mae)))
+                .addContainerGap(308, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(3, 3, 3)
+                .addComponent(txt_endereco, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(Jdata_chooser, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(btn_cadastrar_mae)
+                .addGap(37, 37, 37))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(btn_cadastrar_mae))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txt_endereco, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_nome, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_telefone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(Jdata_chooser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(159, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(34, 34, 34)
-                .addComponent(txt_nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txt_telefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(txt_endereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Jdata_chooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(btn_cadastrar_mae)
-                .addContainerGap(30, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,44 +164,42 @@ public class MaeGUI extends javax.swing.JFrame {
 
         if (dataNasc == null) {
             JOptionPane.showMessageDialog(this, "Erro: Por favor, selecione uma data.");
-            return; 
+            return;
         }
         if (nome.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "O campo 'nome' não pode estar vazio!");
-            return; 
+            return;
         }
         if (endereco.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "O campo 'endereço' não pode estar vazio!");
-            return; 
+            return;
         }
         if (telefone.trim().isEmpty()) {
             JOptionPane.showMessageDialog(null, "O campo 'telefone' não pode estar vazio!");
-            return; 
+            return;
         }
-
 
         Mae mae = new Mae();
         mae.setNome(nome);
         mae.setEnd(endereco);
         mae.setTel(telefone);
         mae.setData(dataNasc);
-        
+
         try {
             maesDAO dao = new maesDAO();
             dao.addMae(mae);
 
             JOptionPane.showMessageDialog(null, "Mãe " + nome + " inserida com sucesso!");
 
-         
             txt_nome.setText("");
             txt_endereco.setText("");
             txt_telefone.setText("");
-            Jdata_chooser.setDate(null); 
+            Jdata_chooser.setDate(null);
 
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Erro ao salvar no banco de dados:\n" + e.getMessage(), 
-                                          "Erro de DAO", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Erro ao salvar no banco de dados:\n" + e.getMessage(),
+                "Erro de DAO", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btn_cadastrar_maeActionPerformed
 
@@ -184,6 +232,10 @@ public class MaeGUI extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser Jdata_chooser;
     private javax.swing.JButton btn_cadastrar_mae;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txt_endereco;
     private javax.swing.JTextField txt_nome;
     private javax.swing.JFormattedTextField txt_telefone;

@@ -6,15 +6,14 @@
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/gui/MaeGUI.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/dao/encontroDAO.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/dao/maesDAO.java</file>
-            <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/gui/EncontroGUI.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/model/Servico.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/dao/servicoDAO.java</file>
-            <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/dao/encontro_servicoDAO.java</file>
-            <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/dao/mae_encontroDAO.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/model/Mae.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/model/Encontro.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/model/enums/Status.java</file>
             <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/factory/ConnectionFactory.java</file>
+            <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/gui/EncontroGUI.java</file>
+            <file>file:/C:/Users/cmfcu/OneDrive/Desktop/2SemADS/LP/Pratica1/MaesQueOram/src/gui/mainGUI.java</file>
         </group>
     </open-files>
 </project-private>

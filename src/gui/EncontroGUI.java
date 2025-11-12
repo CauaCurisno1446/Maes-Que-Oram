@@ -2,6 +2,7 @@ package gui;
 
 import dao.encontroDAO;
 import java.util.Date;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import model.Encontro;
 
@@ -14,6 +15,7 @@ public class EncontroGUI extends javax.swing.JFrame {
      */
     public EncontroGUI() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
